@@ -6,21 +6,35 @@ using namespace std;
 int main (){
 
     string vard;
-    int a, sum;
+    int a, sum, lyt;
     
-
-    cout << "iveskite savo varda: ";
-    cin >> vard;
+    cout<< "kokia jusu lytis? jeigu esate vyras, spauskite 1, jeigu moteris - spauskite 0: ";
+    cin>>lyt;
+    if(lyt==1 || lyt==0)
+    {
+        cout<< "iveskite savo varda: ";
+        cin >> vard;
+    }
+    else
+    {
+        cout<< "pasirinkta neteisingai. bandykite dar karta: ";
+        cin>>lyt;
+        cout<< "iveskite savo varda: ";
+        cin>> vard;
+    }
+    
 
     a = vard.size();
-    sum=a+8+8;
     
+    sum=a+16;
     for(int i=0; i<sum; i++) cout<<"*";
     cout<<endl;
     cout<<"*";
     for(int i=0; i<sum-2; i++) cout << " ";
     cout<<"*"<<endl;
-    cout<<"*    Sveikas,"<<vard<<"! *"<<endl;
+    
+    if(lyt==1) cout<<"*    Sveikas,"<<vard<<"! *"<<endl;
+    else cout<<"*    Sveika,"<<vard<<"!  *"<<endl;
     cout<<"*";
     for(int i=0; i<sum-2; i++) cout << " ";
     cout<<"*"<<endl;
@@ -29,4 +43,4 @@ int main (){
     
     return 0;
     
-}
+    }
