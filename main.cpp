@@ -26,21 +26,42 @@ int main (){
 
     a = vard.size();
     
-    sum=a+16;
-    for(int i=0; i<sum; i++) cout<<"*";
-    cout<<endl;
-    cout<<"*";
-    for(int i=0; i<sum-2; i++) cout << " ";
-    cout<<"*"<<endl;
+    cout<<"kokio dydzio remelio norite? maziausias galimas dydis yra"<<a+11;
+    cin>>sum;
+    if(sum>=a+3)
+    {
+        for(int i=0; i<sum; i++) cout<<"*"; cout<<endl;
+        
+        cout<<"*";
+        for(int i=0; i<sum-2; i++) cout << " ";
+        cout<<"*"<<endl;
+        
+        if(lyt==1)
+        {
+            cout<<"*";
+            for(int i=0;i<(sum-2-9-a)/2; i++) cout<<" ";
+            cout<<"Sveikas, "<<vard<<"!";
+            for(int i=0;i<(sum-2-9-a)/2-1; i++) cout<<" ";
+            cout<<"*"<<endl;
+        }
+        if(lyt==0)
+        {
+            cout<<"*";
+            for(int i=0;i<(sum-2-8-a)/2; i++) cout<<" ";
+            cout<<"Sveika, "<<vard<<"!";
+            for(int i=0;i<(sum-2-8-a)/2-1; i++) cout<<" ";
+            cout<<"*"<<endl;
+        }
+            
+        cout<<"*";
+        for(int i=0; i<sum-2; i++) cout << " ";
+        cout<<"*"<<endl;
+        for(int i=0; i<sum; i++) cout<<"*";
+        cout<<endl;
+    }
     
-    if(lyt==1) cout<<"*    Sveikas,"<<vard<<"! *"<<endl;
-    else cout<<"*    Sveika,"<<vard<<"!  *"<<endl;
-    cout<<"*";
-    for(int i=0; i<sum-2; i++) cout << " ";
-    cout<<"*"<<endl;
-    for(int i=0; i<sum; i++) cout<<"*";
-    cout<<endl;
     
     return 0;
     
     }
+
